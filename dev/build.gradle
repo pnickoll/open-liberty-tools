@@ -213,18 +213,14 @@ def getBuildLabelFromArtifact() {
 
         File aFile = new File(file)
         String fileName = aFile.getName()
-        println "Checking file " + fileName
 
         buildLabel = (fileName =~ "${filePrefix}(.*).zip")[0][1]
-
-        println "Got label " + buildLabel
 
     if (buildLabel.isEmpty()) {
         buildLabel = ant.properties['buildLabel']
         println "Unable to grab build label - ant buildLabel is used instead."
         }
     }
-    println "returning label " + buildLabel
     return buildLabel
 }
 
