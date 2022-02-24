@@ -27,6 +27,7 @@
     <include name="asm-all-5.0.3.jar" />
     <include name="org.apache.aries.util-*.jar" />
     <include name="osgi.core.jar" />
+    <include name="jsch*.jar" />
   </patternset>
 	
   <path id="buildtasks">
